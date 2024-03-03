@@ -47,6 +47,7 @@
 		4F2B37962B9471040029F9FC /* tca_essentialsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_essentialsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F2B37A62B94740D0029F9FC /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		4F2B37A82B9478320029F9FC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		4F2B37AA2B94936E0029F9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		4F2B37782B9471020029F9FC /* tca-essentials */ = {
 			isa = PBXGroup;
 			children = (
+				4F2B37AA2B94936E0029F9FC /* Info.plist */,
 				4F2B37792B9471020029F9FC /* App.swift */,
 				4F2B377D2B9471040029F9FC /* Assets.xcassets */,
 				4F2B377F2B9471040029F9FC /* Preview Content */,
@@ -437,6 +439,7 @@
 				DEVELOPMENT_TEAM = F7R89D79NP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tca-essentials/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +469,7 @@
 				DEVELOPMENT_TEAM = F7R89D79NP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tca-essentials/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
