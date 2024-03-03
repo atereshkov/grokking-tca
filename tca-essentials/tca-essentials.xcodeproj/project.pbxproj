@@ -110,15 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				4F2B37792B9471020029F9FC /* App.swift */,
-				4F2B37B12B94DB520029F9FC /* AppView.swift */,
-				4F2B37B32B94DCE60029F9FC /* AppReducer.swift */,
-				4F2B37A62B94740D0029F9FC /* CounterReducer.swift */,
-				4F2B37A82B9478320029F9FC /* CounterView.swift */,
+				4F2B37B82B94E1970029F9FC /* Root */,
+				4F2B37B72B94E18A0029F9FC /* Counter */,
+				4F2B37B92B94E1A80029F9FC /* API */,
 				4F2B37AA2B94936E0029F9FC /* Info.plist */,
 				4F2B377D2B9471040029F9FC /* Assets.xcassets */,
 				4F2B377F2B9471040029F9FC /* Preview Content */,
-				4F2B37AD2B94CE5A0029F9FC /* NetworkClientStruct.swift */,
-				4F2B37AF2B94D5720029F9FC /* NetworkClientProtocol.swift */,
 			);
 			path = "tca-essentials";
 			sourceTree = "<group>";
@@ -147,6 +144,33 @@
 				4F2B37962B9471040029F9FC /* tca_essentialsUITestsLaunchTests.swift */,
 			);
 			path = "tca-essentialsUITests";
+			sourceTree = "<group>";
+		};
+		4F2B37B72B94E18A0029F9FC /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				4F2B37A62B94740D0029F9FC /* CounterReducer.swift */,
+				4F2B37A82B9478320029F9FC /* CounterView.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		4F2B37B82B94E1970029F9FC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				4F2B37B32B94DCE60029F9FC /* AppReducer.swift */,
+				4F2B37B12B94DB520029F9FC /* AppView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		4F2B37B92B94E1A80029F9FC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F2B37AD2B94CE5A0029F9FC /* NetworkClientStruct.swift */,
+				4F2B37AF2B94D5720029F9FC /* NetworkClientProtocol.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
