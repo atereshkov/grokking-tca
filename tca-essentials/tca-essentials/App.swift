@@ -5,8 +5,8 @@ import SwiftUI
 struct EssentialsApp: App {
     var body: some Scene {
         WindowGroup {
-            CounterView(store: Store(initialState: CounterFeature.State(), reducer: {
-                CounterFeature()
+            CounterView(store: Store(initialState: CounterReducer.State(), reducer: {
+                CounterReducer()
                     ._printChanges()
             }))
         }

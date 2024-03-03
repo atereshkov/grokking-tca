@@ -1,7 +1,7 @@
 import ComposableArchitecture
 
 @Reducer
-struct CounterFeature {
+struct CounterReducer {
 
     @ObservableState
     struct State {
