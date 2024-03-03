@@ -10,12 +10,12 @@
 		4F2B377A2B9471020029F9FC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37792B9471020029F9FC /* App.swift */; };
 		4F2B377E2B9471040029F9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2B377D2B9471040029F9FC /* Assets.xcassets */; };
 		4F2B37812B9471040029F9FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2B37802B9471040029F9FC /* Preview Assets.xcassets */; };
-		4F2B378B2B9471040029F9FC /* tca_essentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B378A2B9471040029F9FC /* tca_essentialsTests.swift */; };
 		4F2B37952B9471040029F9FC /* tca_essentialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37942B9471040029F9FC /* tca_essentialsUITests.swift */; };
 		4F2B37972B9471040029F9FC /* tca_essentialsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37962B9471040029F9FC /* tca_essentialsUITestsLaunchTests.swift */; };
 		4F2B37A52B94735B0029F9FC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2B37A42B94735B0029F9FC /* ComposableArchitecture */; };
 		4F2B37A72B94740D0029F9FC /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37A62B94740D0029F9FC /* CounterReducer.swift */; };
 		4F2B37A92B9478320029F9FC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37A82B9478320029F9FC /* CounterView.swift */; };
+		4F2B37AC2B94C0460029F9FC /* CounterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,13 @@
 		4F2B377D2B9471040029F9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F2B37802B9471040029F9FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F2B37862B9471040029F9FC /* tca-essentialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tca-essentialsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F2B378A2B9471040029F9FC /* tca_essentialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_essentialsTests.swift; sourceTree = "<group>"; };
 		4F2B37902B9471040029F9FC /* tca-essentialsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tca-essentialsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2B37942B9471040029F9FC /* tca_essentialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_essentialsUITests.swift; sourceTree = "<group>"; };
 		4F2B37962B9471040029F9FC /* tca_essentialsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_essentialsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F2B37A62B94740D0029F9FC /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		4F2B37A82B9478320029F9FC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		4F2B37AA2B94936E0029F9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +99,12 @@
 		4F2B37782B9471020029F9FC /* tca-essentials */ = {
 			isa = PBXGroup;
 			children = (
-				4F2B37AA2B94936E0029F9FC /* Info.plist */,
 				4F2B37792B9471020029F9FC /* App.swift */,
-				4F2B377D2B9471040029F9FC /* Assets.xcassets */,
-				4F2B377F2B9471040029F9FC /* Preview Content */,
 				4F2B37A62B94740D0029F9FC /* CounterReducer.swift */,
 				4F2B37A82B9478320029F9FC /* CounterView.swift */,
+				4F2B37AA2B94936E0029F9FC /* Info.plist */,
+				4F2B377D2B9471040029F9FC /* Assets.xcassets */,
+				4F2B377F2B9471040029F9FC /* Preview Content */,
 			);
 			path = "tca-essentials";
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 		4F2B37892B9471040029F9FC /* tca-essentialsTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F2B378A2B9471040029F9FC /* tca_essentialsTests.swift */,
+				4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */,
 			);
 			path = "tca-essentialsTests";
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2B378B2B9471040029F9FC /* tca_essentialsTests.swift in Sources */,
+				4F2B37AC2B94C0460029F9FC /* CounterReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
