@@ -39,7 +39,7 @@ final class CounterFeatureTests: XCTestCase {
         }
     }
 
-    func testNumberFact() async {
+    func testNumberFactStruct() async {
         let store = TestStore(initialState: CounterReducer.State()) {
             CounterReducer()
         } withDependencies: {
@@ -53,5 +53,36 @@ final class CounterFeatureTests: XCTestCase {
             $0.isLoading = false
             $0.fact = "0 is a good number."
         }
+    }
+
+    /*
+    func testNumberFactProtocol() async {
+        let store = TestStore(initialState: CounterReducer.State()) {
+            CounterReducer()
+        } withDependencies: {
+            $0.numberFactProtocol = MockNumberNetworkClient("0 is a good number.")
+        }
+
+        await store.send(.factButtonTapped) {
+            $0.isLoading = true
+        }
+        await store.receive(\.factResponse) {
+            $0.isLoading = false
+            $0.fact = "0 is a good number."
+        }
+    }
+    */
+}
+
+final class MockNumberNetworkClient: NumberNetworkClient {
+
+    var fetchResult: String
+
+    init(_ fetchResult: String) {
+        self.fetchResult = fetchResult
+    }
+
+    override func fetch(_ number: Int) async throws -> String {
+        return fetchResult
     }
 }

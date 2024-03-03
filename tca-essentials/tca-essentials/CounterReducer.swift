@@ -27,6 +27,7 @@ struct CounterReducer {
 
     @Dependency(\.continuousClock) var clock
     @Dependency(\.numberFact) var numberFact
+//    @Dependency(\.numberFactProtocol) var numberFactProtocol
 
     var body: some ReducerOf<Self> {
         Reduce { state, action in
