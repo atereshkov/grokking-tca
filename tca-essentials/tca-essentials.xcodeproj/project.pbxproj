@@ -18,6 +18,9 @@
 		4F2B37AC2B94C0460029F9FC /* CounterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */; };
 		4F2B37AE2B94CE5A0029F9FC /* NetworkClientStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AD2B94CE5A0029F9FC /* NetworkClientStruct.swift */; };
 		4F2B37B02B94D5720029F9FC /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AF2B94D5720029F9FC /* NetworkClientProtocol.swift */; };
+		4F2B37B22B94DB520029F9FC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37B12B94DB520029F9FC /* AppView.swift */; };
+		4F2B37B42B94DCE60029F9FC /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37B32B94DCE60029F9FC /* AppReducer.swift */; };
+		4F2B37B62B94DDF00029F9FC /* AppReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37B52B94DDF00029F9FC /* AppReducerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducerTests.swift; sourceTree = "<group>"; };
 		4F2B37AD2B94CE5A0029F9FC /* NetworkClientStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientStruct.swift; sourceTree = "<group>"; };
 		4F2B37AF2B94D5720029F9FC /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		4F2B37B12B94DB520029F9FC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		4F2B37B32B94DCE60029F9FC /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		4F2B37B52B94DDF00029F9FC /* AppReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				4F2B37792B9471020029F9FC /* App.swift */,
+				4F2B37B12B94DB520029F9FC /* AppView.swift */,
+				4F2B37B32B94DCE60029F9FC /* AppReducer.swift */,
 				4F2B37A62B94740D0029F9FC /* CounterReducer.swift */,
 				4F2B37A82B9478320029F9FC /* CounterView.swift */,
 				4F2B37AA2B94936E0029F9FC /* Info.plist */,
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */,
+				4F2B37B52B94DDF00029F9FC /* AppReducerTests.swift */,
 			);
 			path = "tca-essentialsTests";
 			sourceTree = "<group>";
@@ -278,6 +287,8 @@
 			files = (
 				4F2B37A72B94740D0029F9FC /* CounterReducer.swift in Sources */,
 				4F2B377A2B9471020029F9FC /* App.swift in Sources */,
+				4F2B37B42B94DCE60029F9FC /* AppReducer.swift in Sources */,
+				4F2B37B22B94DB520029F9FC /* AppView.swift in Sources */,
 				4F2B37A92B9478320029F9FC /* CounterView.swift in Sources */,
 				4F2B37AE2B94CE5A0029F9FC /* NetworkClientStruct.swift in Sources */,
 				4F2B37B02B94D5720029F9FC /* NetworkClientProtocol.swift in Sources */,
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2B37B62B94DDF00029F9FC /* AppReducerTests.swift in Sources */,
 				4F2B37AC2B94C0460029F9FC /* CounterReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
