@@ -1,10 +1,3 @@
-//
-//  tca_essentialsApp.swift
-//  tca-essentials
-//
-//  Created by Aliaksandr Tserashkou on 03/03/2024.
-//
-
 import SwiftUI
 
 @main
