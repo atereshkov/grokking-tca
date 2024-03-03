@@ -16,6 +16,7 @@
 		4F2B37A72B94740D0029F9FC /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37A62B94740D0029F9FC /* CounterReducer.swift */; };
 		4F2B37A92B9478320029F9FC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37A82B9478320029F9FC /* CounterView.swift */; };
 		4F2B37AC2B94C0460029F9FC /* CounterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */; };
+		4F2B37AE2B94CE5A0029F9FC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B37AD2B94CE5A0029F9FC /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		4F2B37A82B9478320029F9FC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		4F2B37AA2B94936E0029F9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4F2B37AB2B94C0460029F9FC /* CounterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducerTests.swift; sourceTree = "<group>"; };
+		4F2B37AD2B94CE5A0029F9FC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				4F2B37AA2B94936E0029F9FC /* Info.plist */,
 				4F2B377D2B9471040029F9FC /* Assets.xcassets */,
 				4F2B377F2B9471040029F9FC /* Preview Content */,
+				4F2B37AD2B94CE5A0029F9FC /* NetworkClient.swift */,
 			);
 			path = "tca-essentials";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				4F2B37A72B94740D0029F9FC /* CounterReducer.swift in Sources */,
 				4F2B377A2B9471020029F9FC /* App.swift in Sources */,
 				4F2B37A92B9478320029F9FC /* CounterView.swift in Sources */,
+				4F2B37AE2B94CE5A0029F9FC /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
