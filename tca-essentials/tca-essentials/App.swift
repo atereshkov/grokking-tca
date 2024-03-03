@@ -3,12 +3,13 @@ import SwiftUI
 
 @main
 struct EssentialsApp: App {
+    static let store = Store(initialState: AppReducer.State()) {
+        AppReducer()
+    }
+
     var body: some Scene {
         WindowGroup {
-            CounterView(store: Store(initialState: CounterReducer.State(), reducer: {
-                CounterReducer()
-                    ._printChanges()
-            }))
+            AppView(store: EssentialsApp.store)
         }
     }
 }
