@@ -3,7 +3,7 @@ import ComposableArchitecture
 
 struct ContactsView: View {
 
-    let store: StoreOf<ContactsReducer>
+    @Bindable var store: StoreOf<ContactsReducer>
 
     var body: some View {
         NavigationStack {
@@ -12,15 +12,20 @@ struct ContactsView: View {
                     Text(contact.name)
                 }
             }
-        }
-        .navigationTitle("Contacts")
-        .toolbar {
-            ToolbarItem {
-                Button {
-                    store.send(.addButtonTapped)
-                } label: {
-                    Image(systemName: "plus")
+            .navigationTitle("Contacts")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        store.send(.addButtonTapped)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
+            }
+        }
+        .sheet(item: $store.scope(state: \.addContact, action: \.addContact)) { addContactStore in
+            NavigationStack {
+                AddContactView(store: addContactStore)
             }
         }
     }
