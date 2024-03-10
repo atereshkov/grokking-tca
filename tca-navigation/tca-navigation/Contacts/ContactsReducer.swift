@@ -6,8 +6,7 @@ struct ContactsReducer {
 
     @ObservableState
     struct State: Equatable {
-        @Presents var addContact: AddContactReducer.State?
-        @Presents var alert: AlertState<Action.Alert>?
+        @Presents var destination: Destination.State?
 
         var contacts: IdentifiedArrayOf<Contact> = []
     }
@@ -17,7 +16,7 @@ struct ContactsReducer {
         case addContact(PresentationAction<AddContactReducer.Action>)
         case deleteButtonTapped(contact: Contact)
 
-        case alert(PresentationAction<Alert>)
+        case destination(PresentationAction<Destination.Action>)
 
         enum Alert: Equatable {
             case confirmDeletion(contact: Contact)
@@ -28,35 +27,48 @@ struct ContactsReducer {
         Reduce { state, action in
             switch action {
             case .addButtonTapped:
-                state.addContact = AddContactReducer.State(contact: Contact(id: UUID(), name: ""))
+                state.destination = .addContact(
+                    AddContactReducer.State(
+                        contact: Contact(id: UUID(), name: "")
+                    )
+                )
                 return .none
-//            case .addContact(.presented(.delegate(.cancel))):
-//                state.addContact = nil
-//                return .none
-            case let .addContact(.presented(.delegate(.saveContact(contact)))):
+                //            case .addContact(.presented(.delegate(.cancel))):
+                //                state.addContact = nil
+                //                return .none
+            case let .destination(.presented(.addContact(.delegate(.saveContact(contact))))):
                 state.contacts.append(contact)
-//                state.addContact = nil
+                //                state.addContact = nil
                 return .none
             case .addContact(_):
                 return .none
             case let .deleteButtonTapped(contact: contact):
-                state.alert = AlertState {
-                    TextState("Are you sure?")
-                } actions: {
-                    ButtonState(role: .destructive, action: .confirmDeletion(contact: contact)) {
-                        TextState("Delete")
+                state.destination = .alert(
+                    AlertState {
+                        TextState("Are you sure?")
+                    } actions: {
+                        ButtonState(role: .destructive, action: .confirmDeletion(contact: contact)) {
+                            TextState("Delete")
+                        }
                     }
-                }
+                )
                 return .none
-            case let .alert(.presented(.confirmDeletion(contact: contact))):
+            case let .destination(.presented(.alert(.confirmDeletion(contact: contact)))):
                 state.contacts.remove(contact)
                 return .none
-            case .alert(_):
+            case .destination:
                 return .none
             }
         }
-        .ifLet(\.$addContact, action: \.addContact) { AddContactReducer() }
-        .ifLet(\.$alert, action: \.alert)
+        .ifLet(\.$destination, action: \.destination)
     }
 
+}
+
+extension ContactsReducer {
+    @Reducer(state: .equatable)
+    enum Destination {
+        case addContact(AddContactReducer)
+        case alert(AlertState<ContactsReducer.Action.Alert>)
+    }
 }
