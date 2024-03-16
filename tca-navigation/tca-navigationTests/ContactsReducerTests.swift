@@ -32,4 +32,43 @@ final class ContactsReducerTests: XCTestCase {
         }
     }
 
+    func testAddFlowNonExhaustive() async {
+        let store = TestStore(initialState: ContactsReducer.State()) {
+            ContactsReducer()
+        } withDependencies: {
+            $0.uuid = .incrementing
+        }
+        store.exhaustivity = .off
+
+        await store.send(.addButtonTapped)
+        await store.send(\.destination.addContact.setName, "Blob")
+        await store.send(\.destination.addContact.saveButtonTapped)
+        await store.skipReceivedActions()
+        store.assert {
+            $0.contacts = [
+                Contact(id: UUID(0), name: "Blob")
+            ]
+            $0.destination = nil
+        }
+    }
+
+    func testDeleteFlow() async {
+        let store = TestStore(initialState: ContactsReducer.State(
+            contacts: [
+                Contact(id: UUID(0), name: "Blob"),
+                Contact(id: UUID(1), name: "Blob 2")
+            ]
+        )) {
+            ContactsReducer()
+        }
+
+        await store.send(.deleteButtonTapped(contact: Contact(id: UUID(0), name: "Blob"))) {
+            $0.destination = .alert(.deleteConfirmation(contact: Contact(id: UUID(0), name: "Blob")))
+        }
+        await store.send(.destination(.presented(.alert(.confirmDeletion(contact: Contact(id: UUID(0), name: "Blob")))))) {
+            $0.contacts.remove(id: UUID(0))
+            $0.destination = nil
+        }
+    }
+
 }

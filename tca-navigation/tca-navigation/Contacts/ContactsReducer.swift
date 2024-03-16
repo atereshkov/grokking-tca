@@ -45,15 +45,7 @@ struct ContactsReducer {
             case .addContact(_):
                 return .none
             case let .deleteButtonTapped(contact: contact):
-                state.destination = .alert(
-                    AlertState {
-                        TextState("Are you sure?")
-                    } actions: {
-                        ButtonState(role: .destructive, action: .confirmDeletion(contact: contact)) {
-                            TextState("Delete")
-                        }
-                    }
-                )
+                state.destination = .alert(.deleteConfirmation(contact: contact))
                 return .none
             case let .destination(.presented(.alert(.confirmDeletion(contact: contact)))):
                 state.contacts.remove(contact)
@@ -72,5 +64,17 @@ extension ContactsReducer {
     enum Destination {
         case addContact(AddContactReducer)
         case alert(AlertState<ContactsReducer.Action.Alert>)
+    }
+}
+
+extension AlertState where Action == ContactsReducer.Action.Alert {
+    static func deleteConfirmation(contact: Contact) -> Self {
+        Self {
+            TextState("Are you sure?")
+        } actions: {
+            ButtonState(role: .destructive, action: .confirmDeletion(contact: contact)) {
+                TextState("Delete")
+            }
+        }
     }
 }
