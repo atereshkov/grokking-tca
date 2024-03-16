@@ -3,13 +3,16 @@ import ComposableArchitecture
 
 struct ContactDetailView: View {
 
-    let store: StoreOf<ContactDetailReducer>
+    @Bindable var store: StoreOf<ContactDetailReducer>
 
     var body: some View {
         Form {
-
+            Button("Delete") {
+                store.send(.deleteButtonTapped)
+            }
         }
         .navigationBarTitle(Text(store.contact.name))
+        .alert($store.scope(state: \.alert, action: \.alert))
     }
 
 }
