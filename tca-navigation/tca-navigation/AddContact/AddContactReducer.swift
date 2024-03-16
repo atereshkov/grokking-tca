@@ -15,6 +15,7 @@ struct AddContactReducer {
 
         case delegate(Delegate)
 
+        @CasePathable
         enum Delegate: Equatable {
 //            case cancel
             case saveContact(Contact)

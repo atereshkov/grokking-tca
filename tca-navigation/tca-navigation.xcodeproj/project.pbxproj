@@ -10,7 +10,7 @@
 		4F8804D42B9CE78300361C7F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8804D32B9CE78300361C7F /* App.swift */; };
 		4F8804D82B9CE78500361C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8804D72B9CE78500361C7F /* Assets.xcassets */; };
 		4F8804DB2B9CE78500361C7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8804DA2B9CE78500361C7F /* Preview Assets.xcassets */; };
-		4F8804E52B9CE78500361C7F /* tca_navigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8804E42B9CE78500361C7F /* tca_navigationTests.swift */; };
+		4F8804E52B9CE78500361C7F /* ContactsReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8804E42B9CE78500361C7F /* ContactsReducerTests.swift */; };
 		4F8804EF2B9CE78500361C7F /* tca_navigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8804EE2B9CE78500361C7F /* tca_navigationUITests.swift */; };
 		4F8804F12B9CE78500361C7F /* tca_navigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8804F02B9CE78500361C7F /* tca_navigationUITestsLaunchTests.swift */; };
 		4F8804FF2B9CE7CA00361C7F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8804FE2B9CE7CA00361C7F /* ComposableArchitecture */; };
@@ -44,7 +44,7 @@
 		4F8804D72B9CE78500361C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8804DA2B9CE78500361C7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F8804E02B9CE78500361C7F /* tca-navigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tca-navigationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8804E42B9CE78500361C7F /* tca_navigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_navigationTests.swift; sourceTree = "<group>"; };
+		4F8804E42B9CE78500361C7F /* ContactsReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsReducerTests.swift; sourceTree = "<group>"; };
 		4F8804EA2B9CE78500361C7F /* tca-navigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tca-navigationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8804EE2B9CE78500361C7F /* tca_navigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_navigationUITests.swift; sourceTree = "<group>"; };
 		4F8804F02B9CE78500361C7F /* tca_navigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tca_navigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		4F8804E32B9CE78500361C7F /* tca-navigationTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F8804E42B9CE78500361C7F /* tca_navigationTests.swift */,
+				4F8804E42B9CE78500361C7F /* ContactsReducerTests.swift */,
 			);
 			path = "tca-navigationTests";
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8804E52B9CE78500361C7F /* tca_navigationTests.swift in Sources */,
+				4F8804E52B9CE78500361C7F /* ContactsReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
