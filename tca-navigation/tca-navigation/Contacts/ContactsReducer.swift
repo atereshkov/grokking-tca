@@ -7,7 +7,7 @@ struct ContactsReducer {
     @ObservableState
     struct State: Equatable {
         @Presents var destination: Destination.State?
-
+        var path = StackState<ContactDetailReducer.State>()
         var contacts: IdentifiedArrayOf<Contact> = []
     }
 
@@ -17,6 +17,7 @@ struct ContactsReducer {
         case deleteButtonTapped(contact: Contact)
 
         case destination(PresentationAction<Destination.Action>)
+        case path(StackAction<ContactDetailReducer.State, ContactDetailReducer.Action>)
 
         enum Alert: Equatable {
             case confirmDeletion(contact: Contact)
@@ -52,9 +53,14 @@ struct ContactsReducer {
                 return .none
             case .destination:
                 return .none
+            case .path:
+                return .none
             }
         }
         .ifLet(\.$destination, action: \.destination)
+        .forEach(\.path, action: \.path) {
+            ContactDetailReducer()
+        }
     }
 
 }

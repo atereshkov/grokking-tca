@@ -19,6 +19,8 @@
 		4F8805072B9CEBCA00361C7F /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8805062B9CEBCA00361C7F /* ContactsView.swift */; };
 		4F88050A2B9DAF1700361C7F /* AddContactReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8805092B9DAF1700361C7F /* AddContactReducer.swift */; };
 		4F88050C2B9DAF1D00361C7F /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88050B2B9DAF1D00361C7F /* AddContactView.swift */; };
+		4FC565202BA6019A0017020D /* ContactDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5651F2BA6019A0017020D /* ContactDetailReducer.swift */; };
+		4FC565222BA601A00017020D /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC565212BA601A00017020D /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4F8805062B9CEBCA00361C7F /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		4F8805092B9DAF1700361C7F /* AddContactReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactReducer.swift; sourceTree = "<group>"; };
 		4F88050B2B9DAF1D00361C7F /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		4FC5651F2BA6019A0017020D /* ContactDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailReducer.swift; sourceTree = "<group>"; };
+		4FC565212BA601A00017020D /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				4F8805012B9CEABB00361C7F /* Models */,
 				4F8805082B9DAE8900361C7F /* AddContact */,
 				4F8805002B9CEA7800361C7F /* Contacts */,
+				4FC5651E2BA6018A0017020D /* ContactDetail */,
 				4F8804D72B9CE78500361C7F /* Assets.xcassets */,
 				4F8804D92B9CE78500361C7F /* Preview Content */,
 			);
@@ -163,6 +168,15 @@
 				4F88050B2B9DAF1D00361C7F /* AddContactView.swift */,
 			);
 			path = AddContact;
+			sourceTree = "<group>";
+		};
+		4FC5651E2BA6018A0017020D /* ContactDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4FC5651F2BA6019A0017020D /* ContactDetailReducer.swift */,
+				4FC565212BA601A00017020D /* ContactDetailView.swift */,
+			);
+			path = ContactDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC565202BA6019A0017020D /* ContactDetailReducer.swift in Sources */,
 				4F8805032B9CEACC00361C7F /* Contact.swift in Sources */,
 				4F8805052B9CEAEE00361C7F /* ContactsReducer.swift in Sources */,
 				4F8805072B9CEBCA00361C7F /* ContactsView.swift in Sources */,
+				4FC565222BA601A00017020D /* ContactDetailView.swift in Sources */,
 				4F88050C2B9DAF1D00361C7F /* AddContactView.swift in Sources */,
 				4F8804D42B9CE78300361C7F /* App.swift in Sources */,
 				4F88050A2B9DAF1700361C7F /* AddContactReducer.swift in Sources */,
